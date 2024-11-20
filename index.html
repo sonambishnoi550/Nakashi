@@ -34,17 +34,19 @@
                     },
                     fontSize: {
                         "custom-ssm": "13px",
+                        "custom-lg": "40px",
                         "custom-xl": "64px",
                         "custom-2xl": "56px",
                     },
                     colors: {
                         "light-black": "#222222",
-                        "orange": "#FF9748",
-                        "gray": "#5F5F5F",
-                        "yellow": "#FFE36C",
+                        // "orange": "#FF9748",
+                        "gray": "#cccccc",
+                        // "yellow": "#FFE36C",
                     },
                     lineHeight: {
                         "custom-base": "101%",
+                        "custom-md": "115%",
                         "custom-lg": "117%",
                         "custom-2lg": "125%",
                         "custom-xl": "150%",
@@ -58,12 +60,14 @@
 
 <body>
     <!-- HERO SECTION -->
-    <section class="bg-black lg:bg-[url(assets/images/png/hero-bg.png)] bg-no-repeat bg-cover max-lg:bg-[url(assets/images/png/hero-text-bg.png)]">
+    <section
+        class="bg-black lg:bg-[url(assets/images/png/hero-bg.png)] bg-no-repeat bg-cover max-lg:bg-[url(assets/images/png/hero-text-bg.png)]">
         <div class="container">
             <nav class="flex justify-between items-center xl:pt-11 lg:pt-12 md:pt-7 pt-5 sm:pb-4 pb-0">
                 <a href="#" class="flex items-center gap-4">
 
-                    <h4 class="text-2xl leading-custom-lg  font-normal text-white tracking-wider font-hyper">nAKASHI</h4>
+                    <h4 class="text-2xl leading-custom-lg  font-normal text-white tracking-wider font-hyper">nAKASHI
+                    </h4>
                 </a>
                 <button id="menu-btn" class="text-white focus:outline-none z-40 relative lg:pr-4 lg:hidden pt-2">
                     <svg id="hamburger-icon" class="w-9 h-9" width="32" height="32" viewBox="0 0 32 32" fill="none"
@@ -198,7 +202,7 @@
                 </div>
             </div>
             <div class="lg:hidden block">
-               <img src="assets/images/png/hero-girl.png" alt="girl" class="w-[700px] pt-10">
+                <img src="assets/images/png/hero-girl.png" alt="girl" class="w-[700px] pt-10">
                 <p
                     class="font-normal text-sm pl-6 text-black leading-custom-xl xl:pt-[70px] pt-7  text-center font-Sawarabi-Gothic">
                     ナカシと彼の友人が彼らの宇宙宇宙をゴバーンから救おうとしている物語</p>
@@ -211,6 +215,7 @@
 
         </div>
     </section>
+
     <!-- ABOUT -->
     <section
         class="lg:bg-[url(assets/images/png/about-bg.png)] bg-[url(assets/images/png/bg-about.png)]  bg-black bg-no-repeat bg-cover relative">
@@ -244,6 +249,7 @@
             </div>
         </div>
     </section>
+
     <!-- PAGES -->
     <section class="bg-[url(assets/images/png/pages-bg.png)] bg-black bg-no-repeat bg-cover py-[150px] px-3">
         <div class="container">
@@ -269,6 +275,7 @@
             </div>
         </div>
     </section>
+
     <!-- CHARACTER -->
     <section
         class="bg-[url(assets/images/png/Character-image.png)]  bg-black bg-no-repeat bg-cover lg:py-[100px] relative">
@@ -311,35 +318,412 @@
                         <img src="assets/images/svg/right-arrow.svg" alt="arrow">
                     </div>
                     <div class="lg:hidden flex justify-center">
-                        <img src="assets/images/png/character-girl.png" alt="girl" class=" md:max-w-[520px] max-w-[330px]">
+                        <img src="assets/images/png/character-girl.png" alt="girl"
+                            class=" md:max-w-[520px] max-w-[330px]">
                     </div>
                     <div
                         class="lg:hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover md:py-[60px] py-[50px] md:pl-[60px] px-6 max-w-[600px] mx-auto">
-                        <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK</h1>
+                        <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK
+                        </h1>
                         <p
                             class="md:max-w-[408px] max-w-[327px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4 max-md:text-center">
                             Lorem ipsum is simply dummy text of the
                             printing and typesetting industry. Lorem Ipsum has been the industry's standard
                             dummy text ever since the 1500s.</p>
                         <div class="md:flex pt-8">
-                            <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
+                            <p
+                                class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
                                 Combat</p>
                             <img src="assets/images/svg/combat.svg" alt="combat" class="max-md:ml-10">
                         </div>
                         <div class="md:flex pt-5">
-                            <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-[60px] max-md:text-center max-md:pb-[10px]">
+                            <p
+                                class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-[60px] max-md:text-center max-md:pb-[10px]">
                                 Skill</p>
                             <img src="assets/images/svg/skill.svg" alt="skill" class="max-md:ml-10">
                         </div>
                     </div>
                     <div class="lg:block hidden absolute right-[1%] xl:top-[16%] top-[30%] ">
-                        <img src="assets/images/png/character-girl.png" alt="girl" class="xl:max-w-[805px] max-w-[590px]">
+                        <img src="assets/images/png/character-girl.png" alt="girl"
+                            class="xl:max-w-[805px] max-w-[590px]">
                     </div>
                 </div>
             </div>
         </div>
 
     </section>
+
+    <!-- GALLERY -->
+    <section class="bg-[url(assets/images/png/gallery-bg.png)] bg-no-repeat bg-cover pt-[200px]">
+        <div class="container">
+            <div class="flex justify-between pb-[100px]">
+                <div>
+                    <img src="assets/images/png/gallery-logo.png" alt="logo" class="max-w-[572px]">
+                </div>
+                <div>
+                    <p class="font-semibold text-black text-lg leading-custom-2lg font-Lexend-Deca pt-12 text-end">20 /
+                        100%</p>
+                    <img src="assets/images/png/gallery-line.png" alt="line" class="max-w-[364px]">
+                </div>
+            </div>
+            <p class="text-black font-Lexend-Deca font-light text-2xl leading-custom-2lg text-center pb-12">4000 pages
+                of
+                story will be made</p>
+            <div class="flex gap-6 pb-12">
+                <div class="border border-gray py-[22px] max-w-[267px]  h-[100px]">
+                    <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
+                    <p class="font-Lexend-Deca font-normal text-sm text-black px-[84px] pt-[10px] whitespace-nowrap">
+                        <span class="font-semibold text-2xl">800</span> / 4000
+                    </p>
+                </div>
+                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
+                    <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">OWNERS</p>
+                    <p class="font-Lexend-Deca   text-black px-[109px] pt-[10px]
+                    font-semibold text-2xl">440</p>
+                </div>
+                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
+                    <p class="font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
+                    <p class="font-Lexend-Deca whitespace-nowrap leading-custom-2lg flex  text-black px-[70px] pt-[10px]
+                                        font-semibold text-2xl"> <span>
+                            <svg class="mt-[6px] mr-1" width="13" height="20" viewBox="0 0 13 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.6"
+                                    d="M6.13974 7.39478L0 10.1871L6.13974 13.8145L12.2771 10.1871L6.13974 7.39478Z"
+                                    fill="#222222" />
+                                <path d="M0 10.187L6.13974 13.8144V0L0 10.187Z" fill="#222222" />
+                                <path d="M6.14062 0V13.8144L12.2779 10.187L6.14062 0Z" fill="#222222" />
+                                <path d="M0 11.3503L6.13974 20V14.9777L0 11.3503Z" fill="#222222" />
+                                <path d="M6.14062 14.9776V19.9999L12.2828 11.3502L6.14062 14.9776Z" fill="#222222" />
+                            </svg>
+                        </span>0.12 ETH</p>
+                </div>
+                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat max-w-[276px] h-[100px]">
+                    <div class="flex">
+                        <img src="assets/images/svg/buy.svg" alt="buy" class="mx-5 my-[30px] size-[40px]">
+                        <div class="border border-gray h-[100px] "></div>
+                        <p
+                            class="text-white font-Lexend-Deca font-bold text-lg py-[27px] pl-5 pr-4 !leading-custom-2lg">
+                            BUY NOW AT
+                            OPENSEA</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="flex gap-5 pt-[52px]">
+                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
+                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
+                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
+            </div>
+            <div class="flex gap-5 pt-5">
+                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
+                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
+                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
+            </div>
+            <div class="flex gap-5 pt-5">
+                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
+                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
+                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
+            </div>
+        </div>
+    </section>
+    <!-- HOW IT WORKS -->
+    <section class="bg-[url(assets/images/png/How-Works-bg.png)] bg-no-repeat bg-cover pt-[100px] pb-[290px]">
+        <div class="container">
+            <img src="assets/images/png/works-logo.png" alt="logo" class="max-w-[547px] mx-auto pb-[100px]">
+            <p class="text-black font-Lexend-Deca font-light text-2xl text-center leading-custom-2lg ">Mixed reality NFTs
+                project</p>
+            <p class="text-black font-Lexend-Deca font-light text-sm max-w-[752px] mx-auto text-center pt-6 pb-[50px]">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard
+                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen
+                book.</p>
+            <div class="bg-black flex pl-[100px] mt-[112px]">
+                <div>
+                    <p class="font-normal text-custom-lg text-white font-hyper max-w-[366px] pt-[250px] leading-custom-md">THIS IS VIDEO
+                        SAMPLE COVER</p>
+                        <p class="font-Lexend-Deca text-white leading-custom-xl text-lg font-light ">Video is 16:9 aspect ratio (widescreen)</p>
+                </div>
+                <a href="" class="flex items-center justify-center mt-[30px] ml-[70px]"><img src="assets/images/png/works-icon.png" alt="icon" class="size-[64px]"></a>
+                <div>
+                    <img src="assets/images/png/works-girl.png" alt="girl" class="max-w-[532px] pt-[60px]">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TEAM -->
+    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover py-[100px] -mt-1">
+        <div class="container">
+            <img src="assets/images/png/team-logo.png" alt="logo" class="max-w-[466px] mx-auto pb-[100px]">
+            <p
+                class="font-light text-2xl text-center text-white opacity-65 leading-custom-2lg pb-[100px] font-Lexend-Deca">
+                See who’s
+                behind this cool project</p>
+            <div class="flex gap-6">
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image1.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Marco Stein</p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image2.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Imogen Mckinney</p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image3.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Rai Lyons
+                    </p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image4.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Kaiya Dunlap</p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="flex gap-6 pt-[100px] justify-center">
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image5.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Michio Barr</p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image6.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Ryo Navarro</p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+                <div class="bg-black">
+                    <img src="assets/images/png/team-image7.png" alt="team1" class="max-w-[267px]">
+                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                        Tianna Bauer
+                    </p>
+                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover -mt-1">
+        <div class="container">
+            <img src="assets/images/png/faq-logo.png" alt="logo" class="max-w-[319px] mx-auto py-[100px]">
+            <p class="text-white font-light text-2xl leading-custom-2lg text-center font-Lexend-Deca pb-[100px]">
+                Frequently Asked Question</p>
+            <!-- faq -->
+            <div class="mx-auto pb-[100px]">
+                <div class="accordion-item pt-[18px] bg-grey cursor-pointer">
+                    <div
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        <p
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            <span class="pr-4">01 </span>When is the mint date?
+                        </p>
+                        <div class="accordion-icons flex justify-end">
+                            <img src="assets/images/png/faq-plus.png" alt="plus"
+                                class="accordion-icon-plus size-[12px]">
+                            <img src="assets/images/png/faq-minus.png" alt="minus"
+                                class="accordion-icon-minus hidden size-[12px]">
+                        </div>
+                    </div>
+                    <div
+                        class="accordion-content font-light text-sm leading-custom-xl active:pb-5 text-white opacity-75 font-Lexend-Deca px-6 pt-6 max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out max-w-[752px] mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type specimen
+                        book. It has survived not only five centuries.
+                    </div>
+                </div>
+                <div class="accordion-item bg-grey cursor-pointer">
+                    <div
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        <p
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            <span class="pr-4">02 </span> How much will each nakashi pages cost?
+                        </p>
+                        <div class="accordion-icons flex justify-end">
+                            <img src="assets/images/png/faq-plus.png" alt="plus"
+                                class="accordion-icon-plus size-[12px]">
+                            <img src="assets/images/png/faq-minus.png" alt="minus"
+                                class="accordion-icon-minus hidden size-[12px]">
+                        </div>
+                    </div>
+                    <div
+                        class="accordion-content font-light text-sm leading-custom-xl text-white opacity-75 font-Lexend-Deca px-6 pt-6 max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out max-w-[752px] mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's
+                        standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type
+                        specimen
+                        book. It has survived not only five centuries.
+                    </div>
+                </div>
+                <div class="accordion-item bg-grey cursor-pointer">
+                    <div
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        <p
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            <span class="pr-4">03 </span> 03 How can I use my NFTs?
+                        </p>
+                        <div class="accordion-icons flex justify-end">
+                            <img src="assets/images/png/faq-plus.png" alt="plus"
+                                class="accordion-icon-plus size-[12px]">
+                            <img src="assets/images/png/faq-minus.png" alt="minus"
+                                class="accordion-icon-minus hidden size-[12px]">
+                        </div>
+                    </div>
+                    <div
+                        class="accordion-content font-light text-sm leading-custom-xl text-white opacity-75 font-Lexend-Deca px-6 pt-6 max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out max-w-[752px] mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's
+                        standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type
+                        specimen
+                        book. It has survived not only five centuries.
+                    </div>
+                </div>
+                <div class="accordion-item bg-grey cursor-pointer">
+                    <div
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        <p
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            <span class="pr-4">04 </span> 04 How to play with real Nakashi manga pages?
+                        </p>
+                        <div class="accordion-icons flex justify-end">
+                            <img src="assets/images/png/faq-plus.png" alt="plus"
+                                class="accordion-icon-plus size-[12px]">
+                            <img src="assets/images/png/faq-minus.png" alt="minus"
+                                class="accordion-icon-minus hidden size-[12px]">
+                        </div>
+                    </div>
+                    <div
+                        class="accordion-content font-light text-sm leading-custom-xl text-white opacity-75 font-Lexend-Deca px-6 pt-6 max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out max-w-[752px] mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's
+                        standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type
+                        specimen
+                        book. It has survived not only five centuries.
+                    </div>
+                </div>
+                <div class="accordion-item bg-grey cursor-pointer">
+                    <div
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        <p
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            <span class="pr-4">05 </span> 05 How can I use my NFTs?
+                        </p>
+                        <div class="accordion-icons flex justify-end">
+                            <img src="assets/images/png/faq-plus.png" alt="plus"
+                                class="accordion-icon-plus size-[12px]">
+                            <img src="assets/images/png/faq-minus.png" alt="minus"
+                                class="accordion-icon-minus hidden size-[12px]">
+                        </div>
+                    </div>
+                    <div
+                        class="accordion-content font-light text-sm leading-custom-xl text-white opacity-75 font-Lexend-Deca px-6 pt-6 max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out max-w-[752px] mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's
+                        standard
+                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                        to make a type
+                        specimen
+                        book. It has survived not only five centuries.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN NAKASHI -->
+    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover -mt-1">
+        <div class="flex">
+            <div>
+                <img src="assets/images/png/join-image.png" alt="girl" class="max-w-[900px]">
+            </div>
+            <div class="pl-[26px]">
+                <h2 class="font-normal text-custom-lg text-white font-hyper leading-custom-md pt-[313px] pb-6">JOIN
+                    NAKASHI
+                    COMMUNITY</h2>
+                <p class="text-white font-Lexend-Deca font-light max-w-[330px] text-lg leading-tight">Be part of our
+                    amazing community & stay tuned for the news.</p>
+                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10">
+                    <span>
+                        <svg class="my-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_413)">
+                                <path
+                                    d="M20.317 4.49197C18.787 3.80197 17.147 3.29197 15.432 3.00197C15.4167 2.99904 15.4009 3.00093 15.3868 3.00738C15.3726 3.01383 15.3608 3.02452 15.353 3.03797C15.143 3.40697 14.909 3.88797 14.745 4.26797C12.9261 3.99621 11.0769 3.99621 9.25799 4.26797C9.07533 3.84683 8.86934 3.4362 8.64099 3.03797C8.63325 3.02436 8.62154 3.01342 8.60743 3.00663C8.59331 2.99984 8.57746 2.99752 8.56199 2.99997C6.84799 3.28997 5.20799 3.79997 3.67699 4.49097C3.66382 4.4965 3.65265 4.50592 3.64499 4.51797C0.532992 9.09297 -0.320008 13.555 0.0989923 17.961C0.100158 17.9718 0.103508 17.9822 0.108837 17.9917C0.114167 18.0011 0.121364 18.0094 0.129992 18.016C1.94638 19.3384 3.97233 20.3458 6.12299 20.996C6.13798 21.0006 6.15402 21.0006 6.16901 20.9959C6.18399 20.9913 6.19723 20.9822 6.20699 20.97C6.66899 20.35 7.08099 19.695 7.43299 19.007C7.45399 18.967 7.43399 18.919 7.39199 18.903C6.746 18.6597 6.12008 18.3661 5.51999 18.025C5.50921 18.0188 5.50012 18.0101 5.49355 17.9995C5.48698 17.989 5.48312 17.977 5.48233 17.9646C5.48153 17.9522 5.48383 17.9398 5.48901 17.9286C5.49418 17.9173 5.50208 17.9075 5.51199 17.9C5.63799 17.807 5.76399 17.71 5.88399 17.613C5.89479 17.6042 5.9078 17.5987 5.92158 17.5969C5.93535 17.5952 5.94934 17.5973 5.96199 17.603C9.88899 19.367 14.142 19.367 18.023 17.603C18.0357 17.5969 18.0498 17.5946 18.0638 17.5961C18.0778 17.5977 18.091 17.6032 18.102 17.612C18.222 17.71 18.347 17.807 18.474 17.9C18.484 17.9073 18.492 17.917 18.4974 17.9282C18.5027 17.9394 18.5052 17.9517 18.5046 17.9641C18.504 17.9765 18.5004 17.9885 18.494 17.9991C18.4876 18.0098 18.4787 18.0186 18.468 18.025C17.87 18.369 17.248 18.66 16.595 18.902C16.585 18.9056 16.5758 18.9113 16.5682 18.9188C16.5606 18.9263 16.5546 18.9353 16.5507 18.9452C16.5468 18.9551 16.5451 18.9658 16.5457 18.9764C16.5463 18.9871 16.5491 18.9975 16.554 19.007C16.914 19.694 17.326 20.348 17.779 20.969C17.7884 20.9817 17.8015 20.9912 17.8166 20.9963C17.8316 21.0013 17.8478 21.0015 17.863 20.997C20.0173 20.3486 22.0466 19.3407 23.865 18.016C23.8739 18.0098 23.8813 18.0017 23.8868 17.9924C23.8923 17.9831 23.8958 17.9727 23.897 17.962C24.397 12.868 23.059 8.44197 20.348 4.51997C20.3413 4.50723 20.3303 4.49729 20.317 4.49197ZM8.01999 15.278C6.83799 15.278 5.86299 14.209 5.86299 12.898C5.86299 11.586 6.81899 10.518 8.01999 10.518C9.22999 10.518 10.196 11.595 10.177 12.898C10.177 14.21 9.22099 15.278 8.01999 15.278ZM15.995 15.278C14.812 15.278 13.838 14.209 13.838 12.898C13.838 11.586 14.793 10.518 15.995 10.518C17.205 10.518 18.171 11.595 18.152 12.898C18.152 14.21 17.206 15.278 15.995 15.278Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_413">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </span>
+                    <div class="border-r border-gray h-[64px] pl-6"></div>
+                    <p class="font-bold text-lg text-white leading-custom-2lg font-Lexend-Deca py-5 pl-6">JOIN DISCORD
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover pt-[127px] pb-[35px] -mt-1">
+        <div class="container">
+            <div class="flex justify-between">
+                <div>
+                    <p class="text-white font-normal text-2xl font-hyper leading-custom-md">NAKASHI</p>
+                    <p class="font-light uppercase text-white text-[12px] font-Lexend-Deca leading-custom-2lg pt-1">
+                        Copyright &copy;<span id="year"></span> all rights reserved
+                    </p>
+                </div>
+                <div class="flex gap-4 lg:pb-24 pb-16">
+                    <a href="#">
+                        <img src="assets/images/svg/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="#">
+                        <img src="assets/images/svg/discord.svg" alt="discord">
+                    </a>
+                    <a href="#"> <img src="assets/images/svg/twitter.svg" alt="twitter"></a>
+                    <a href="#">
+                        <img src="assets/images/svg/opensea.svg" alt="opensea">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="./assets/js/app.js"></script>
 </body>
 
