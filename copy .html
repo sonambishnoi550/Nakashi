@@ -7,11 +7,11 @@
     <title>Nakashi</title>
     <!---------------custom css link------------------------>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <!---------------------favicon--------------------------->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!---------------------------------tailwind link-------------------->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script>
         tailwind.config = {
             theme: {
@@ -321,72 +321,51 @@
                     </div>
                 </div>
             </div>
+
+            <div class="flex pt-11 max-lg:justify-center pb-8">
+                <img src="assets/images/svg/left-arrow.svg" alt="arrow">
+                <img src="assets/images/svg/right-arrow.svg" alt="arrow">
+            </div>
             <div class="flex-col">
                 <div class="flex pt-11 max-lg:justify-center pb-8">
-                    <img src="assets/images/svg/left-arrow.svg" alt="arrow">
-                    <img src="assets/images/svg/right-arrow.svg" alt="arrow">
+                    <img src="assets/images/svg/left-arrow.svg" alt="arrow" class="slick-prev">
+                    <img src="assets/images/svg/right-arrow.svg" alt="arrow" class="slick-next">
                 </div>
-                <div
-                    class="swiper mySwiper2 max-w-[403px] pb-5 xl:pt-32 pt-0">
-                    <div class="swiper-wrapper cursor-pointer">
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="max-w-[450px] image ">
-
+                <div class="slider-wrapper max-w-[403px] pb-5 xl:pt-32 pt-0">
+                    <div class="slider">
+                        <div>
+                            <img src="./assets/images/png/slider1-image.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="max-w-[450px] image ">
-
+                        <div>
+                            <img src="./assets/images/png/hero-girl.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/slider1-image.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/hero-girl.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/slider1-image.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/hero-girl.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/slider1-image.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
+                        <div>
+                            <img src="./assets/images/png/hero-girl.png" alt="table" class="max-w-[450px] image">
                         </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="max-w-[450px] image object-contain">
-
-                        </div>
-
-
                     </div>
                 </div>
                 <div
                     class="lg:hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover md:py-[60px] py-[50px] md:pl-[60px] px-6 max-w-[600px] mx-auto">
-                    <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK
-                    </h1>
+                    <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK</h1>
                     <p
                         class="md:max-w-[408px] max-w-[327px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4 max-md:text-center">
-                        Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                        dummy text ever since the 1500s.</p>
+                        Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.</p>
                     <div class="md:flex pt-8">
                         <p
                             class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
@@ -400,223 +379,36 @@
                         <img src="assets/images/svg/skill.svg" alt="skill" class="max-md:ml-10">
                     </div>
                 </div>
-
             </div>
+            <div
+                class="lg:hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover md:py-[60px] py-[50px] md:pl-[60px] px-6 max-w-[600px] mx-auto">
+                <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK
+                </h1>
+                <p
+                    class="md:max-w-[408px] max-w-[327px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4 max-md:text-center">
+                    Lorem ipsum is simply dummy text of the
+                    printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s.</p>
+                <div class="md:flex pt-8">
+                    <p
+                        class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
+                        Combat</p>
+                    <img src="assets/images/svg/combat.svg" alt="combat" class="max-md:ml-10">
+                </div>
+                <div class="md:flex pt-5">
+                    <p
+                        class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-[60px] max-md:text-center max-md:pb-[10px]">
+                        Skill</p>
+                    <img src="assets/images/svg/skill.svg" alt="skill" class="max-md:ml-10">
+                </div>
+            </div>
+
+        </div>
         </div>
 
 
     </section>
 
-    <!-- TEAM -->
-    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover py-[100px] -mt-1">
-        <div class="container">
-            <img src="assets/images/png/team-logo.png" alt="logo"
-                class="lg:max-w-[466px] max-w-[300px] mx-auto pb-[100px]">
-            <p
-                class="font-light text-2xl text-center text-white opacity-65 leading-custom-2lg pb-[100px] font-Lexend-Deca">
-                See who’s
-                behind this cool project</p>
-            <div class="lg:block hidden">
-                <div class=" flex gap-6">
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image1.png" alt="team1"
-                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Marco Stein</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image2.png" alt="team1"
-                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Imogen Mckinney</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image3.png" alt="team1"
-                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Rai Lyons
-                        </p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image4.png" alt="team1"
-                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Kaiya Dunlap</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                </div>
-                <div class="flex gap-6 xl:pt-[100px] pt-[80px] justify-center">
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image5.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Michio Barr</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image6.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Ryo Navarro</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image7.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Tianna Bauer
-                        </p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="lg:hidden block">
-                <div class="slider-list overflow-hidden">
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image1.png" alt="team1" class="max-w-[231px] ">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Marco Stein</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image2.png" alt="team1" class="max-w-[231px] ">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Imogen Mckinney</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image3.png" alt="team1" class="max-w-[231px] ">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Rai Lyons
-                        </p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image4.png" alt="team1" class=" max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Kaiya Dunlap</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image6.png" alt="team1" class="max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Ryo Navarro</p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text
-                            of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-                    <div class="bg-black">
-                        <img src="assets/images/png/team-image7.png" alt="team1" class=" max-w-[231px]">
-                        <p
-                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                            Tianna Bauer
-                        </p>
-                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text
-                            of
-                            the
-                            printing and typesetting industry.</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SLIDER -->
-    <section id="quality"
-        class="bg-green bg-[url(./assets/images/webp/slider-bg-layer.webp)] bg-cover relative bg-no-repeat overflow-hidden xl:pb-11 lg:pb-12 md:pb-10 sm:pb-8 pb-6 xl:pt-16 lg:pt-4 pt-0 -mt-1">
-        <div class="container">
-            <div class="flex justify-between max-lg:flex-wrap">
-                <div
-                    class="swiper mySwiper2 2xl:max-w-[636px] xl:max-w-[535px] md:max-w-[420px] max-w-[202px] m-auto pb-5 xl:pt-32 pt-0">
-                    <div class="swiper-wrapper cursor-pointer">
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/hero-girl.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-                        <div class="swiper-slide relative">
-                            <img src="./assets/images/png/slider1-image.png" alt="table"
-                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
-
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--ROADMAP -->
     <section class="bg-black text-white py-16">
@@ -679,25 +471,20 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/app.js"></script>
+
     <script>
-        var swiper2 = new Swiper(".mySwiper2", {
-            grabCursor: false,
-            effect: "creative",
-            creativeEffect: {
-                prev: {
-                    shadow: false,
-                    translate: [0, 0, -400],
-                },
-                next: {
-                    translate: ["90%", 0, 0],
-                },
-            },
-            slideToClickedSlide: true,
-            speed: 1500,
-            smooth: true,
-            loop: true,
+        $(document).ready(function () {
+            $('.slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                autoplay: true,
+            });
         });
     </script>
 </body>
