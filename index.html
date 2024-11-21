@@ -369,8 +369,8 @@
             <p class="text-black font-Lexend-Deca font-light text-2xl leading-custom-2lg text-center pb-12">4000 pages
                 of
                 story will be made</p>
-            <div class="flex gap-6 pb-12">
-                <div class="border border-gray py-[22px] max-w-[267px]  h-[100px]">
+            <div class="md:flex gap-6 pb-12">
+                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
                     <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
                     <p class="font-Lexend-Deca font-normal text-sm text-black px-[84px] pt-[10px] whitespace-nowrap">
                         <span class="font-semibold text-2xl">800</span> / 4000
@@ -662,17 +662,17 @@
 
     <!-- JOIN NAKASHI -->
     <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover -mt-1">
-        <div class="flex">
-            <div>
-                <img src="assets/images/png/join-image.png" alt="girl" class="max-w-[900px]">
+        <div class="lg:flex">
+            <div class="max-lg:flex justify-center">
+                <img src="assets/images/png/join-image.png" alt="girl" class="xl:max-w-[900px] md:max-w-[660px] max-w-[360px]">
             </div>
             <div class="pl-[26px]">
-                <h2 class="font-normal text-custom-lg text-white font-hyper leading-custom-md pt-[313px] pb-6">JOIN
+                <h2 class="font-normal text-custom-lg text-white font-hyper leading-custom-md xl:pt-[313px] lg:pt-[236px] pt-20 max-lg:text-center pb-6">JOIN
                     NAKASHI
                     COMMUNITY</h2>
-                <p class="text-white font-Lexend-Deca font-light max-w-[330px] text-lg leading-tight">Be part of our
+                <p class="text-white font-Lexend-Deca font-light max-w-[330px] text-lg leading-tight  max-lg:text-center max-lg:max-w-none">Be part of our
                     amazing community & stay tuned for the news.</p>
-                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10">
+                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10 mx-auto">
                     <span>
                         <svg class="my-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -699,16 +699,24 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover pt-[127px] pb-[35px] -mt-1">
+    <footer class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover  pb-[35px] -mt-1">
         <div class="container">
             <div class="flex justify-between">
                 <div>
-                    <p class="text-white font-normal text-2xl font-hyper leading-custom-md">NAKASHI</p>
+                    <p class="text-white font-normal text-2xl font-hyper leading-custom-md pt-[127px]">NAKASHI</p>
                     <p class="font-light uppercase text-white text-[12px] font-Lexend-Deca leading-custom-2lg pt-1">
                         Copyright &copy;<span id="year"></span> all rights reserved
                     </p>
                 </div>
-                <div class="flex gap-4 lg:pb-24 pb-16">
+                <div class=" flex flex-col items-center  max-lg:hidden transition-all duration-700 scroll-smooth pt-[127px]">
+                    <a href="/">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 14.9998L12 7.49976L4.5 14.9998" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></a>
+                    <a href="/" class="text-white mt-6">BACK TO TOP</a>
+                </div>
+                <div class="flex gap-4 lg:pb-24 pb-16 pt-[127px]">
                     <a href="#">
                         <img src="assets/images/svg/telegram.svg" alt="telegram">
                     </a>
