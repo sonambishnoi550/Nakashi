@@ -75,3 +75,23 @@ $('.slider-list').slick({
     pauseOnHover: true,
     arrows: false,
 });
+// 
+// Swiper for the second slider (creative effect)
+var swiper2 = new Swiper(".mySwiper2", {
+    grabCursor: false,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: false,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["90%", 0, 0],
+        },
+    },
+    slideToClickedSlide: true,
+    speed: 1500,
+    smooth: true,
+    loop: true,
+
+});

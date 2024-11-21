@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
         integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!---------------------------------tailwind link-------------------->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -48,6 +49,9 @@
                     colors: {
                         "light-black": "#222222",
                         "gray": "#cccccc",
+                        "off-white": "#F4F4F4",
+                        "dark-black": "#1A1A1A",
+                        "dark-blue": "#403CFF",
                     },
                     lineHeight: {
                         "custom-base": "101%",
@@ -61,6 +65,10 @@
         };
     </script>
     <style>
+        .roadmap-box .point-hover:hover {
+            background-color: #ffffff !important;
+        }
+
         @keyframes scroll-right-to-left {
             0% {
                 transform: translateX(0%);
@@ -97,8 +105,29 @@
         .scroll-left-to-right:hover {
             animation-play-state: paused;
         }
+
         .animate-spin {
             animation: spin 20s linear infinite !important;
+        }
+         .mySwiper2.swiper {
+            overflow: visible !important;
+            margin-left: 9px;
+        }
+
+        #quality .swiper-slide {
+            width: 500px;
+        }
+
+        #quality .swiper-slide-active {
+            padding-bottom: 90px;
+        }
+
+        #quality .swiper-slide img:not(.arrow-img) {
+            width: 547px;
+        }
+
+        #quality .swiper-slide-active img:not(.arrow-img) {
+            width: 632px;
         }
     </style>
 </head>
@@ -164,7 +193,7 @@
                             class="font-Lexend-Deca font-normal text-custom-ssm text-white hover:font-bold transition-all duration-500">FAQ</a>
                     </li>
                 </ul>
-                <div id="mobile-menu" class="fixed inset-0 z-30 bg-black  text-white flex flex-col items-center justify-center space-y-6 text-xl
+                <div id="mobile-menu" class="fixed inset-0 z-30  backdrop-blur-[40px]  text-white flex flex-col items-center justify-center space-y-6 text-xl
                                     transform translate-x-full transition-transform duration-700 ease-out gap-7">
                     <ul class="p-2 rounded-full items-center justify-start flex flex-col gap-4 ">
                         <li>
@@ -225,16 +254,26 @@
                         class="font-normal text-5xl text-white leading-custom-base max-w-[302px] mx-auto text-center pt-5 font-Lexend-Deca lg:pb-56 pb-40">
                         4000 Pages Manga NFTs Collections</h1>
                     <div class="flex gap-4 lg:pb-24 pb-16">
-                        <a href="#">
-                            <img src="assets/images/svg/telegram.svg" alt="telegram">
-                        </a>
-                        <a href="#">
-                            <img src="assets/images/svg/discord.svg" alt="discord">
-                        </a>
-                        <a href="#"> <img src="assets/images/svg/twitter.svg" alt="twitter"></a>
-                        <a href="#">
-                            <img src="assets/images/svg/opensea.svg" alt="opensea">
-                        </a>
+                        <div
+                            class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                            <a target="_blank" href="https://www.telegram.com/"><img src="/assets/images/svg/telegram.svg"
+                                    alt="telegram-icon" /></a>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                            <a target="_blank" href="https://www.dicord.com/"><img src="/assets/images/svg/discord.svg"
+                                    alt="telegram-icon" /></a>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                            <a target="_blank" href="https://www.twitter.com/"><img src="/assets/images/svg/twitter.svg"
+                                    alt="telegram-icon" /></a>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                            <a target="_blank" href="https://opensea.io/"><img
+                                    src="/assets/images/svg/opensea.svg" alt="opensea" /></a>
+                        </div>
                     </div>
                 </div>
                 <div class="absolute xl:left-[30%] xl:top-[10%] left-[45%]">
@@ -265,14 +304,14 @@
     <section
         class="lg:bg-[url(assets/images/png/about-bg.png)] bg-[url(assets/images/png/bg-about.png)]  bg-black bg-no-repeat bg-cover relative">
         <div class="container">
-            <div class="lg:flex xl:py-[274px] lg:pb-[150px] pb-20 justify-between">
+            <div class="lg:flex xl:py-[274px] lg:pb-[150px] md:pb-20 justify-between">
                 <div class="xl:pt-[112px]">
                     <img src="assets/images/png/about-text.png" alt="text"
                         class="size-[128px] lg:ml-[180px] xl:mt-0 lg:mt-[230px] max-lg:hidden">
                     <img src="assets/images/png/about-text.png" alt="text"
                         class="size-[128px] lg:ml-[180px] xl:mt-0 lg:mt-[230px] absolute left-[44%] top-[15%] z-10 lg:hidden">
                     <img src="assets/images/png/about-man.png" alt="man"
-                        class="md:size-[500px] size-[350px] absolute top-[-8%] md:left-[20%] lg:hidden">
+                        class="md:size-[500px] size-[350px] absolute md:top-[-8%] top-[1%] md:left-[20%] lg:hidden">
                 </div>
                 <div class="flex-col xl:pt-[50px] lg:pt-[80px] max-lg:pt-[330px]">
                     <p class="font-light text-lg text-white font-Lexend-Deca leading-custom-xl max-lg:text-center">ABOUT
@@ -296,7 +335,7 @@
     </section>
 
     <!-- PAGES -->
-    <section class="bg-[url(assets/images/png/pages-bg.png)] bg-black bg-no-repeat bg-cover py-[150px] px-3">
+    <section class="bg-[url(assets/images/png/pages-bg.png)] bg-black bg-no-repeat bg-cover md:py-[150px] pt-[50px] pb-[80px] px-3">
         <div class="container">
             <div class="lg:flex justify-between ">
                 <div class="flex-col xl:pt-[161px] pt-28 ">
@@ -322,113 +361,129 @@
     </section>
 
     <!-- CHARACTER -->
-    <section
-        class="bg-[url(assets/images/png/Character-image.png)]  bg-black bg-no-repeat bg-cover lg:py-[100px] relative">
-        <div class="container px-0 sm:px-4">
-            <div class="lg:flex justify-between lg:pb-[100px] pb-20">
-                <div class="">
-                    <img src="assets/images/png/character-logo.png" alt="logo"
-                        class="lg:max-w-[531px] md:max-w-[450px] max-w-[230px] pointer-events-none max-lg:mx-auto">
+<section class="bg-[url(assets/images/png/Character-image.png)]  bg-black bg-no-repeat bg-cover lg:py-[100px] relative">
+    <div class="container px-0 sm:px-4">
+        <div class="xl:flex xl:pb-[100px]">
+            <div class="">
+                <img src="assets/images/png/character-logo.png" alt="logo"
+                    class="lg:max-w-[531px] md:max-w-[450px] max-w-[230px] pointer-events-none max-xl:mx-auto">
+                <p
+                    class="text-white opacity-70 xl:max-w-[481px] lg:pt-10 pt-7 xl:pb-[172px] pb-10 max-lg:text-center px-4">
+                    Lorem ipsum is simply dummy text of
+                    the
+                    printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                    to make a type specimen
+                    book.</p>
+                <div
+                    class="lg:block hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover py-[60px] pl-[60px] lg:max-w-[655px] md:max-w-[600px] sm:max-w-[500px] max-xl:mx-auto">
+                    <h1 class="font-normal text-white text-5xl leading-none font-hyper">THALIK</h1>
                     <p
-                        class="text-white opacity-70 lg:max-w-[481px] lg:pt-10 pt-7 lg:pb-[172px] pb-10 max-lg:text-center px-4">
-                        Lorem ipsum is simply dummy text of
-                        the
+                        class="max-w-[408px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4">
+                        Lorem ipsum is simply dummy text of the
                         printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                        to make a type specimen
-                        book.</p>
-                    <div
-                        class="lg:block hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover py-[60px] pl-[60px] lg:w-[655px] md:w-[600px] sm:w-[500px]">
-                        <h1 class="font-normal text-white text-5xl leading-none font-hyper">THALIK</h1>
-                        <p
-                            class="max-w-[408px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4">
-                            Lorem ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                            dummy text ever since the 1500s.</p>
-                        <div class="flex pt-8">
-                            <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg pr-8">
-                                Combat</p>
-                            <img src="assets/images/svg/combat.svg" alt="combat">
-                        </div>
-                        <div class="flex pt-5">
-                            <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg pr-[60px]">
-                                Skill</p>
-                            <img src="assets/images/svg/skill.svg" alt="skill">
-                        </div>
+                        dummy text ever since the 1500s.</p>
+                    <div class="flex pt-8">
+                        <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg pr-8">
+                            Combat</p>
+                        <img src="assets/images/svg/combat.svg" alt="combat">
+                    </div>
+                    <div class="flex pt-5">
+                        <p class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg pr-[60px]">
+                            Skill</p>
+                        <img src="assets/images/svg/skill.svg" alt="skill">
                     </div>
                 </div>
-                <div class="flex-col">
-                    <div class="flex pt-11 max-lg:justify-center pb-8">
-                        <img src="assets/images/svg/left-arrow.svg" alt="arrow">
-                        <img src="assets/images/svg/right-arrow.svg" alt="arrow">
+            </div>
+            <div class="flex-col">
+                <div class="flex pt-11 max-lg:justify-center pb-8 ml-[400px]">
+                    <img src="assets/images/svg/left-arrow.svg" alt="arrow">
+                    <img src="assets/images/svg/right-arrow.svg" alt="arrow">
+                </div>
+                <div class="swiper mySwiper2 lg:max-w-[400px] md:max-w-[390px] max-w-[170px] m-auto pb-5 xl:pt-32 pt-0">
+                    <div class="swiper-wrapper cursor-pointer">
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/slider1-image.png" alt="table"
+                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/hero-girl.png" alt="table"
+                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/slider1-image.png" alt="table"
+                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/hero-girl.png" alt="table"
+                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/slider1-image.png" alt="table"
+                                class="2xl:max-w-[632px] xl:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
+                        </div>
+
                     </div>
-                    <div class="lg:hidden flex justify-center">
-                        <img src="assets/images/png/character-girl.png" alt="girl"
-                            class=" md:max-w-[520px] max-w-[330px]">
-                    </div>
-                    <div
-                        class="lg:hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover md:py-[60px] py-[50px] md:pl-[60px] px-6 max-w-[600px] mx-auto">
-                        <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK
-                        </h1>
+                </div>
+                <div
+                    class="lg:hidden bg-[url(assets/images/png/character-box.png)] bg-no-repeat bg-cover md:py-[60px] py-[50px] md:pl-[60px] px-6 max-w-[600px] mx-auto">
+                    <h1 class="font-normal text-white text-5xl leading-none max-md:text-center font-hyper">THALIK
+                    </h1>
+                    <p
+                        class="md:max-w-[408px] max-w-[327px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4 max-md:text-center">
+                        Lorem ipsum is simply dummy text of the
+                        printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever since the 1500s.</p>
+                    <div class="md:flex pt-8">
                         <p
-                            class="md:max-w-[408px] max-w-[327px] text-white text-sm font-light font-Lexend-Deca leading-custom-xl opacity-75 pt-4 max-md:text-center">
-                            Lorem ipsum is simply dummy text of the
-                            printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                            dummy text ever since the 1500s.</p>
-                        <div class="md:flex pt-8">
-                            <p
-                                class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
-                                Combat</p>
-                            <img src="assets/images/svg/combat.svg" alt="combat" class="max-md:ml-10">
-                        </div>
-                        <div class="md:flex pt-5">
-                            <p
-                                class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-[60px] max-md:text-center max-md:pb-[10px]">
-                                Skill</p>
-                            <img src="assets/images/svg/skill.svg" alt="skill" class="max-md:ml-10">
-                        </div>
+                            class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-8 max-md:text-center max-md:pb-[10px]">
+                            Combat</p>
+                        <img src="assets/images/svg/combat.svg" alt="combat" class="max-md:ml-10">
                     </div>
-                    <div class="lg:block hidden absolute right-[1%] xl:top-[16%] top-[30%] ">
-                        <img src="assets/images/png/character-girl.png" alt="girl"
-                            class="xl:max-w-[805px] max-w-[590px]">
+                    <div class="md:flex pt-5">
+                        <p
+                            class="font-Lexend-Deca text-base text-white font-semibold leading-custom-2lg md:pr-[60px] max-md:text-center max-md:pb-[10px]">
+                            Skill</p>
+                        <img src="assets/images/svg/skill.svg" alt="skill" class="max-md:ml-10">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
+</section>
 
     <!-- GALLERY -->
     <section class="bg-[url(assets/images/png/gallery-bg.png)] bg-no-repeat bg-cover pt-[200px]">
         <div class="container">
-            <div class="flex justify-between pb-[100px]">
+            <div class="lg:flex justify-between lg:pb-[100px] pb-10">
                 <div>
-                    <img src="assets/images/png/gallery-logo.png" alt="logo" class="max-w-[572px]">
+                    <img src="assets/images/png/gallery-logo.png" alt="logo" class="lg:max-w-[572px] md:max-w-[472px] sm:max-w-[400px] max-w-[300px] max-sm:mx-auto">
                 </div>
                 <div>
-                    <p class="font-semibold text-black text-lg leading-custom-2lg font-Lexend-Deca pt-12 text-end">20 /
+                    <p class="font-semibold text-black text-lg leading-custom-2lg font-Lexend-Deca lg:pt-12 pt-4 lg:text-end text-center">20 /
                         100%</p>
-                    <img src="assets/images/png/gallery-line.png" alt="line" class="max-w-[364px]">
+                    <img src="assets/images/png/gallery-line.png" alt="line" class="max-w-[364px] max-lg:mx-auto">
                 </div>
             </div>
             <p class="text-black font-Lexend-Deca font-light text-2xl leading-custom-2lg text-center pb-12">4000 pages
                 of
                 story will be made</p>
-            <div class="md:flex gap-6 pb-12">
-                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
+            <div class="flex flex-wrap gap-6 pb-12">
+                <div class="border border-gray py-[22px] xl:max-w-[267px] max-w-[216px] h-[100px] max-sm:mx-auto">
                     <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
-                    <p class="font-Lexend-Deca font-normal text-sm text-black px-[84px] pt-[10px] whitespace-nowrap">
+                    <p class="font-Lexend-Deca font-normal text-sm text-black xl:px-[84px] px-[60px] pt-[10px] whitespace-nowrap">
                         <span class="font-semibold text-2xl">800</span> / 4000
                     </p>
                 </div>
-                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
+                <div class="border border-gray py-[22px] xl:max-w-[267px] max-w-[216px] h-[100px] max-sm:mx-auto">
                     <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">OWNERS</p>
-                    <p class="font-Lexend-Deca   text-black px-[109px] pt-[10px]
+                    <p class="font-Lexend-Deca   text-black xl:px-[109px] px-[80px] pt-[10px]
                         font-semibold text-2xl">440</p>
                 </div>
-                <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
+                <div class="border border-gray py-[22px] xl:max-w-[267px] max-w-[216px] h-[100px] max-sm:mx-auto">
                     <p class="font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
-                    <p class="font-Lexend-Deca whitespace-nowrap leading-custom-2lg flex  text-black px-[70px] pt-[10px]
+                    <p class="font-Lexend-Deca whitespace-nowrap leading-custom-2lg flex  text-black xl:px-[70px] px-[50px] pt-[10px]
                                             font-semibold text-2xl"> <span>
                             <svg class="mt-[6px] mr-1" width="13" height="20" viewBox="0 0 13 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -442,7 +497,7 @@
                             </svg>
                         </span>0.12 ETH</p>
                 </div>
-                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat max-w-[276px] h-[100px]">
+                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat xl:max-w-[276px] max-w-[246px] h-[100px] max-lg:mx-auto">
                     <div class="flex">
                         <img src="assets/images/svg/buy.svg" alt="buy" class="mx-5 my-[30px] size-[40px]">
                         <div class="border border-gray h-[100px] "></div>
@@ -522,9 +577,9 @@
         </div>
     </section>
     <!-- HOW IT WORKS -->
-    <section class="bg-[url(assets/images/png/How-Works-bg.png)] bg-no-repeat bg-cover pt-[100px] pb-[290px]">
+    <section class="bg-[url(assets/images/png/How-Works-bg.png)] bg-no-repeat bg-cover md:pt-[100px] pt-16 lg:pb-[290px] pb-[160px]">
         <div class="container">
-            <img src="assets/images/png/works-logo.png" alt="logo" class="max-w-[547px] mx-auto pb-[100px]">
+            <img src="assets/images/png/works-logo.png" alt="logo" class="g:max-w-[572px] md:max-w-[472px] sm:max-w-[400px] max-w-[300px] mx-auto md:pb-[100px] pb-10">
             <p class="text-black font-Lexend-Deca font-light text-2xl text-center leading-custom-2lg ">Mixed reality
                 NFTs
                 project</p>
@@ -537,20 +592,18 @@
             <div class="flex justify-center">
                 <a href="#blue-image"><img src="assets/images/png/blue-image.png" alt="blue-image"
                         class="w-[400px]"></a>
-
             </div>
-            <div class="relative w-full  overflow-hidden bg-black pl-[100px]">
-                <div class=" w-full flex justify-between">
+            <div class="relative w-full  overflow-hidden bg-black md:pl-[100px] max-lg:px-3">
+                <div class=" w-full lg:flex justify-between">
                     <div>
                         <p
-                            class="font-normal text-custom-lg text-white font-hyper max-w-[366px] pt-[250px] leading-custom-md">
+                            class="font-normal md:text-custom-lg text-4xl text-white font-hyper max-w-[366px] max-lg:mx-auto max-lg:text-center lg:pt-[250px] pt-[100px] leading-custom-md">
                             THIS IS VIDEO
                             SAMPLE COVER</p>
-                        <p class="font-Lexend-Deca text-white leading-custom-xl text-lg font-light ">Video is 16:9
+                        <p class="font-Lexend-Deca text-white leading-custom-xl text-lg font-light max-lg:text-center max-lg:pt-4">Video is 16:9
                             aspect
                             ratio
                             (widescreen)</p>
-
                     </div>
                     <div class=" inset-0 flex items-center justify-center absolute">
                         <button id="toggle-button" class=" p-4 rounded-full shadow-lg focus:outline-none">
@@ -563,7 +616,7 @@
                         </button>
                     </div>
                     <img id="dream-image" src="assets/images/png/works-girl.png" alt="Dream House"
-                        class="max-w-[626px] object-cover  object-center  w-full  pointer-events-none">
+                        class="lg:max-w-[626px] md:max-w-[515px] max-w-[400px] object-cover  object-center  w-full  pointer-events-none">
 
                     <div class=" overflow-hidden">
                         <video id="dream-video" class="inset-0 mx-auto object-cover hidden absolute !w-[1325px] "
@@ -573,80 +626,108 @@
                         </video>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </section>
     <!--ROADMAP -->
-    <section class="bg-black text-white py-16">
+    <section class="bg-black text-white md:py-16 pb-10 pt-0 bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover">
         <div class="container mx-auto px-4">
-            <!-- Header -->
-            <img class="mx-auto sm:max-w-[778px] max-[768px]:w-[350px] " src="/assets/image/svg/roadmap.svg" alt="">
-            <img class="mx-auto animate-spin max-[768px]:w-[350px]" src="/assets/image/png/galaxy.png" alt="">
+            <img src="assets/images/png/roadmap-logo.png" alt="logo" class="xl:max-w-[784px] lg:max-w-[572px] md:max-w-[472px] sm:max-w-[400px] max-w-[300px] max-sm:mx-auto mx-auto md:pb-[100px] pb-10">
+            <p class="text-white font-light text-2xl leading-custom-2lg font-Lexend-Deca text-center pb-10">There’s more
+                than one star in
+                the galaxy</p>
+            <img src="assets/images/png/spin.png" alt="spin"
+                class="xl:max-w-[700px] lg:max-w-[600px] md:max-w-[500px] sm:max-w-[300px] max-w-[250px] mx-auto animate-spin">
             <!-- Roadmap Phases -->
             <!-- Phase 1 -->
-            <div class=" sm:max-w-[994px] mx-auto mt-10 mb-10">
-                <div class="max-w-[364px] mx-auto lg:m-0">
-                    <h3 class="text-[13px] leading-4  font-normal ">Phase 1</h3>
-                    <h4 class="text-lg text-white hyper font-normal text-[32px] leading-9 ">Q2 2022</h4>
-                    <p class="text-white font-light text-sm leading-[21px] ">
-                        Lorem ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text
-                        ever since the 1500s.
-                    </p>
+            <div class="w-full max-w-[364px] max-md:mx-auto mt-12 roadmap-box">
+                <div class="justify-between flex">
+                    <p class="text-off-white font-normal text-custom-ssm font-lexend-Deca">PHASE 1</p>
+                    <div
+                        class="text-off-white border border-solid border-off-white w-5 h-5 rounded-full p-1 flex items-center justify-center">
+                        <p class="point-hover w-[10px] h-[10px] rounded-full transition-all ease-linear duration-200">
+                        </p>
+                    </div>
                 </div>
+                <h4 class="font-hyper text-white font-normal text-[32px] pt-6">
+                    Q2 2022
+                </h4>
+                <p class="text-sm text-off-white font-lexend-Deca pt-6 max-md:text-xsm">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since.
+                </p>
             </div>
             <!-- Phase 2 -->
-            <div class=" sm:max-w-[994px] mx-auto mt-10 mb-10">
-                <div class="max-w-[364px] mx-auto lg:mr-0 lg:ml-auto">
-                    <h3 class="text-[13px] leading-4  font-normal ">Phase 2</h3>
-                    <h4 class="text-lg text-white hyper font-normal text-[32px] leading-9 ">Q3 2022</h4>
-                    <p class="text-white font-light text-sm leading-[21px] ">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard
-                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen
-                        book. It has survived not only five centuries.
-                    </p>
+            <div class="w-full max-w-[364px] ml-auto max-md:mr-auto md:mt-[10px] mt-10 roadmap-box">
+                <div class="justify-between flex">
+                    <p class="text-off-white font-normal text-custom-ssm font-lexend-Deca">PHASE 2</p>
+                    <div
+                        class="text-off-white border border-solid border-off-white w-5 h-5 rounded-full p-1 flex items-center justify-center">
+                        <p class="w-[10px] h-[10px] rounded-full transition-all ease-linear duration-200 point-hover">
+                        </p>
+                    </div>
                 </div>
+                <h4 class="font-hyper text-white font-normal text-[32px] pt-6">
+                    Q3 2022
+                </h4>
+                <p class="text-sm text-off-white font-lexend-Deca pt-6 max-md:text-xsm">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries.
+                </p>
             </div>
             <!-- Phase 3 -->
-            <div class=" sm:max-w-[994px] mx-auto mt-10 mb-10">
-                <div class="max-w-[364px] mx-auto lg:m-0">
-                    <h3 class="text-[13px] leading-4  font-normal ">Phase 3</h3>
-                    <h4 class="text-lg text-white hyper font-normal text-[32px] leading-9 ">Q4 2022</h4>
-                    <p class="text-white font-light text-sm leading-[21px] ">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard
-                        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen
-                        book. It has survived not only five centuries.
-                    </p>
+            <div class="w-full max-w-[364px] max-md:mx-auto md:mt-[10px] mt-10 roadmap-box">
+                <div class="justify-between flex">
+                    <p class="text-off-white font-normal text-custom-ssm font-lexend-Deca">PHASE 3</p>
+                    <div
+                        class="text-off-white border border-solid border-off-white w-5 h-5 rounded-full p-1 flex items-center justify-center">
+                        <p class="w-[10px] h-[10px] rounded-full point-hover transition-all ease-linear duration-200">
+                        </p>
+                    </div>
                 </div>
+                <h4 class="font-hyper text-white font-normal text-[32px] pt-6 ">
+                    Q3 2022
+                </h4>
+                <p class="text-sm text-off-white font-lexend-Deca pt-6 max-md:text-xsm">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since the 1500s, when an unknown printer took a galley of
+                    type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries.
+                </p>
             </div>
             <!-- Phase 4 -->
-            <div class=" sm:max-w-[994px] mx-auto mt-10 mb-10">
-                <div class="max-w-[364px] mx-auto lg:mr-0 lg:ml-auto">
-                    <h3 class="text-[13px] leading-4  font-normal ">Phase 4</h3>
-                    <h4 class="text-lg text-white hyper font-normal text-[32px] leading-9 ">Q1 / Q2 2023</h4>
-                    <p class="text-white font-light text-sm leading-[21px] ">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard
-                        dummy text ever since.
-                    </p>
+            <div class="w-full max-w-[364px] ml-auto max-md:mr-auto md:mt-[10px] mt-10 roadmap-box">
+                <div class="justify-between flex">
+                    <p class="text-off-white font-normal text-custom-ssm font-lexend-Deca">PHASE 4</p>
+                    <div
+                        class="text-off-white border border-solid border-off-white w-5 h-5 rounded-full p-1 flex items-center justify-center">
+                        <p class="w-[10px] h-[10px] rounded-full transition-all ease-linear duration-200 point-hover">
+                        </p>
+                    </div>
                 </div>
+                <h4 class="font-hyper text-white font-normal text-[32px] pt-6 ">
+                    Q1 / Q2 2023
+                </h4>
+                <p class="text-sm text-off-white font-lexend-Deca pt-6 max-md:text-xsm">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text
+                    ever since.
+                </p>
             </div>
         </div>
     </section>
     <!-- TEAM -->
-    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover py-[100px] -mt-1">
+    <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover md:py-[100px] pt-10 -mt-1">
         <div class="container">
             <img src="assets/images/png/team-logo.png" alt="logo"
-                class="lg:max-w-[466px] max-w-[300px] mx-auto pb-[100px]">
+                class="lg:max-w-[466px] max-w-[300px] mx-auto md:pb-[100px] pb-10">
             <p
-                class="font-light text-2xl text-center text-white opacity-65 leading-custom-2lg pb-[100px] font-Lexend-Deca">
+                class="font-light text-2xl text-center text-white opacity-65 leading-custom-2lg md:pb-[100px] pb-10 font-Lexend-Deca">
                 See who’s
                 behind this cool project</p>
             <div class="lg:block hidden">
@@ -793,16 +874,16 @@
     <!-- FAQ -->
     <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover -mt-1">
         <div class="container">
-            <img src="assets/images/png/faq-logo.png" alt="logo" class="max-w-[319px] mx-auto py-[100px]">
-            <p class="text-white font-light text-2xl leading-custom-2lg text-center font-Lexend-Deca pb-[100px]">
+            <img src="assets/images/png/faq-logo.png" alt="logo" class="max-w-[319px] mx-auto md:py-[100px] pt-20 pb-10">
+            <p class="text-white font-light text-2xl leading-custom-2lg text-center font-Lexend-Deca md:pb-[100px] pb-10">
                 Frequently Asked Question</p>
             <!-- faq -->
-            <div class="mx-auto pb-[100px]">
+            <div class="mx-auto md:pb-[100px] pb-16">
                 <div class="accordion-item pt-[18px] bg-grey cursor-pointer">
                     <div
-                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8">
+                        class="accordion-header flex justify-between items-center max-w-[752px] mx-auto text-left bg-[#1b1b1b] py-6 px-8 ">
                         <p
-                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg">
+                            class="font-semibold text-lg text-white font-Lexend-Deca items-center flex leading-custom-2lg ">
                             <span class="pr-4">01 </span>When is the mint date?
                         </p>
                         <div class="accordion-icons flex justify-end">
@@ -932,7 +1013,7 @@
                 <img src="assets/images/png/join-image.png" alt="girl"
                     class="xl:max-w-[900px] md:max-w-[660px] max-w-[360px]">
             </div>
-            <div class="pl-[26px]">
+            <div class="md:pl-[26px]">
                 <h2
                     class="font-normal text-custom-lg text-white font-hyper leading-custom-md xl:pt-[313px] lg:pt-[236px] pt-20 max-lg:text-center pb-6">
                     JOIN
@@ -943,7 +1024,7 @@
                     Be part of our
                     amazing community & stay tuned for the news.</p>
                 <div
-                    class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10 mx-auto">
+                    class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10 max-md:mx-auto">
                     <span>
                         <svg class="my-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -972,15 +1053,15 @@
     <!-- FOOTER -->
     <footer class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover  pb-[35px] -mt-1">
         <div class="container">
-            <div class="flex justify-between">
+            <div class="md:flex justify-between">
                 <div>
-                    <p class="text-white font-normal text-2xl font-hyper leading-custom-md pt-[127px]">NAKASHI</p>
-                    <p class="font-light uppercase text-white text-[12px] font-Lexend-Deca leading-custom-2lg pt-1">
+                    <p class="text-white font-normal text-2xl font-hyper leading-custom-md md:pt-[127px] pt-20 max-md:text-center">NAKASHI</p>
+                    <p class="font-light uppercase text-white text-[12px] font-Lexend-Deca leading-custom-2lg pt-1 max-md:text-center">
                         Copyright &copy;<span id="year"></span> all rights reserved
                     </p>
                 </div>
                 <div
-                    class=" flex flex-col items-center  max-lg:hidden transition-all duration-700 scroll-smooth pt-[127px]">
+                    class=" flex flex-col items-center  max-lg:hidden transition-all duration-700 scroll-smooth pt-[127px] ">
                     <a href="/">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.5 14.9998L12 7.49976L4.5 14.9998" stroke="white" stroke-linecap="round"
@@ -988,17 +1069,26 @@
                         </svg></a>
                     <a href="/" class="text-white mt-6">BACK TO TOP</a>
                 </div>
-                <div class="flex gap-4 lg:pb-24 pb-16 pt-[127px]">
-                    <a href="#">
-                        <img src="assets/images/svg/telegram.svg" alt="telegram">
-                    </a>
-                    <a href="#">
-                        <img src="assets/images/svg/discord.svg" alt="discord">
-                    </a>
-                    <a href="#"> <img src="assets/images/svg/twitter.svg" alt="twitter"></a>
-                    <a href="#">
-                        <img src="assets/images/svg/opensea.svg" alt="opensea">
-                    </a>
+                <div class="flex gap-4 lg:pb-24 md:pt-[127px] pt-10 max-md:justify-center">
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                        <a target="_blank" href="https://www.telegram.com/"><img src="/assets/images/svg/telegram.svg"
+                                alt="telegram-icon" /></a>
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                        <a target="_blank" href="https://www.dicord.com/"><img src="/assets/images/svg/discord.svg"
+                                alt="telegram-icon" /></a>
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                        <a target="_blank" href="https://www.twitter.com/"><img src="/assets/images/svg/twitter.svg"
+                                alt="telegram-icon" /></a>
+                    </div>
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center bg-dark-black transition-all ease-linear duration-200 hover:bg-dark-blue">
+                        <a target="_blank" href="https://opensea.io/"><img src="/assets/images/svg/opensea.svg" alt="opensea" /></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1009,6 +1099,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
         integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!-- Include jQuery -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/app.js"></script>
 
 </body>
