@@ -43,3 +43,35 @@ document.querySelectorAll('.accordion-item').forEach((accordionItem) => {
 
 // current year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// video js
+document.getElementById('toggle-button').addEventListener('click', function () {
+    const image = document.getElementById('dream-image');
+    const video = document.getElementById('dream-video');
+
+    if (video.classList.contains('hidden')) {
+        image.classList.add('hidden');
+        video.classList.remove('hidden');
+        video.play();
+    } else {
+        video.classList.add('hidden');
+        image.classList.remove('hidden');
+        video.pause();
+        video.currentTime = 0;
+    }
+});
+document.getElementById('toggle-button').addEventListener('click', function () {
+    this.remove();
+});
+// slider
+$('.slider-list').slick({
+    dots: false,
+    infinite: true,
+    speed: 5000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    variableWidth: true,
+    pauseOnHover: true,
+    arrows: false,
+});

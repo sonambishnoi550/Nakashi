@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!---------------------favicon--------------------------->
     <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
+    <!--SLIDER LINK  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!---------------------------------tailwind link-------------------->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -40,9 +47,7 @@
                     },
                     colors: {
                         "light-black": "#222222",
-                        // "orange": "#FF9748",
                         "gray": "#cccccc",
-                        // "yellow": "#FFE36C",
                     },
                     lineHeight: {
                         "custom-base": "101%",
@@ -55,7 +60,44 @@
             },
         };
     </script>
+    <style>
+        @keyframes scroll-right-to-left {
+            0% {
+                transform: translateX(0%);
+            }
 
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .scroll-right-to-left {
+            animation: scroll-right-to-left 15s linear infinite;
+        }
+
+        .scroll-right-to-left:hover {
+            animation-play-state: paused;
+        }
+
+        /*========================== scroll-left-to-right keyframe ===================== */
+        @keyframes scroll-left-to-right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        .scroll-left-to-right {
+            animation: scroll-left-to-right 15s linear infinite;
+        }
+
+        .scroll-left-to-right:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 
 <body>
@@ -379,12 +421,12 @@
                 <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
                     <p class=" font-Lexend-Deca font-light text-black text-custom-ssm text-center">OWNERS</p>
                     <p class="font-Lexend-Deca   text-black px-[109px] pt-[10px]
-                    font-semibold text-2xl">440</p>
+                        font-semibold text-2xl">440</p>
                 </div>
                 <div class="border border-gray py-[22px] max-w-[267px] h-[100px]">
                     <p class="font-Lexend-Deca font-light text-black text-custom-ssm text-center">Listed</p>
                     <p class="font-Lexend-Deca whitespace-nowrap leading-custom-2lg flex  text-black px-[70px] pt-[10px]
-                                        font-semibold text-2xl"> <span>
+                                            font-semibold text-2xl"> <span>
                             <svg class="mt-[6px] mr-1" width="13" height="20" viewBox="0 0 13 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path opacity="0.6"
@@ -406,31 +448,73 @@
                             BUY NOW AT
                             OPENSEA</p>
                     </div>
-
-
                 </div>
+            </div>
+        </div>
+        <div class="overflow-hidden w-full max-w-[1920px] mx-auto bg-white mb-5">
+            <div class="flex space-x-4 scroll-right-to-left">
+                <!-- Logos with 100px space between them -->
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
 
+                <!-- Duplicate Logos to ensure smooth scrolling -->
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
             </div>
-            <div class="flex gap-5 pt-[52px]">
-                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
-                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
-                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
+        </div>
+        <div class="overflow-hidden w-full max-w-[1920px] mx-auto bg-white mb-5">
+            <div class="flex  space-x-4 scroll-left-to-right">
+                <!-- Logos with 100px space between them -->
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-6" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-7" class="max-w-[320px]">
+                <!-- Duplicate Logos to ensure smooth scrolling -->
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-6" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-7" class="max-w-[320px]">
             </div>
-            <div class="flex gap-5 pt-5">
-                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
-                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
-                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
-            </div>
-            <div class="flex gap-5 pt-5">
-                <img src="assets/images/png/gallery-image1.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image2.png" alt="gallery" class="max-w-[320px]">
-                <img src="assets/images/png/gallery-image3.png" alt="gallery" class="max-w-[320px]">
-                <!-- <img src="assets/images/png/gallery-image4.png" alt="gallery" class="max-w-[320px]"> -->
-                <!-- <img src="assets/images/png/gallery-image5.png" alt="gallery" class="max-w-[320px]"> -->
+        </div>
+        <div class="overflow-hidden w-full max-w-[1920px] mx-auto bg-white">
+            <div class="flex  space-x-5 scroll-right-to-left">
+                <!-- Logos with 100px space between them -->
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
+
+                <!-- Duplicate Logos to ensure smooth scrolling -->
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image4.png" alt="Logo-4" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image5.png" alt="Logo-5" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image1.png" alt="Logo-1" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image2.png" alt="Logo-2" class="max-w-[320px]">
+                <img src="assets/images/png/gallery-image3.png" alt="Logo-3" class="max-w-[320px]">
             </div>
         </div>
     </section>
@@ -438,7 +522,8 @@
     <section class="bg-[url(assets/images/png/How-Works-bg.png)] bg-no-repeat bg-cover pt-[100px] pb-[290px]">
         <div class="container">
             <img src="assets/images/png/works-logo.png" alt="logo" class="max-w-[547px] mx-auto pb-[100px]">
-            <p class="text-black font-Lexend-Deca font-light text-2xl text-center leading-custom-2lg ">Mixed reality NFTs
+            <p class="text-black font-Lexend-Deca font-light text-2xl text-center leading-custom-2lg ">Mixed reality
+                NFTs
                 project</p>
             <p class="text-black font-Lexend-Deca font-light text-sm max-w-[752px] mx-auto text-center pt-6 pb-[50px]">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -446,82 +531,198 @@
                 dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
                 a type specimen
                 book.</p>
-            <div class="bg-black flex pl-[100px] mt-[112px]">
-                <div>
-                    <p class="font-normal text-custom-lg text-white font-hyper max-w-[366px] pt-[250px] leading-custom-md">THIS IS VIDEO
-                        SAMPLE COVER</p>
-                        <p class="font-Lexend-Deca text-white leading-custom-xl text-lg font-light ">Video is 16:9 aspect ratio (widescreen)</p>
+            <div class="flex justify-center">
+                <a href="#blue-image"><img src="assets/images/png/blue-image.png" alt="blue-image"
+                        class="w-[400px]"></a>
+
+            </div>
+            <div class="relative w-full  overflow-hidden bg-black pl-[100px]">
+                <div class=" w-full flex justify-between">
+                    <div>
+                        <p
+                            class="font-normal text-custom-lg text-white font-hyper max-w-[366px] pt-[250px] leading-custom-md">
+                            THIS IS VIDEO
+                            SAMPLE COVER</p>
+                        <p class="font-Lexend-Deca text-white leading-custom-xl text-lg font-light ">Video is 16:9
+                            aspect
+                            ratio
+                            (widescreen)</p>
+
+                    </div>
+                    <div class=" inset-0 flex items-center justify-center absolute">
+                        <button id="toggle-button" class=" p-4 rounded-full shadow-lg focus:outline-none">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.2" cx="32" cy="32" r="32" fill="white" />
+                                <path d="M44 32L26 42.3923L26 21.6077L44 32Z" fill="white" />
+                            </svg>
+
+                        </button>
+                    </div>
+                    <img id="dream-image" src="assets/images/png/works-girl.png" alt="Dream House"
+                        class="max-w-[626px] object-cover  object-center  w-full  pointer-events-none">
+
+                    <div class=" overflow-hidden">
+                        <video id="dream-video" class="inset-0 mx-auto object-cover hidden absolute !w-[1325px] "
+                            controlslist="nodownload" autoplay muted>
+                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-                <a href="" class="flex items-center justify-center mt-[30px] ml-[70px]"><img src="assets/images/png/works-icon.png" alt="icon" class="size-[64px]"></a>
-                <div>
-                    <img src="assets/images/png/works-girl.png" alt="girl" class="max-w-[532px] pt-[60px]">
-                </div>
+
+
+
             </div>
         </div>
     </section>
     <!-- TEAM -->
     <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover py-[100px] -mt-1">
         <div class="container">
-            <img src="assets/images/png/team-logo.png" alt="logo" class="max-w-[466px] mx-auto pb-[100px]">
+            <img src="assets/images/png/team-logo.png" alt="logo"
+                class="lg:max-w-[466px] max-w-[300px] mx-auto pb-[100px]">
             <p
                 class="font-light text-2xl text-center text-white opacity-65 leading-custom-2lg pb-[100px] font-Lexend-Deca">
                 See who’s
                 behind this cool project</p>
-            <div class="flex gap-6">
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image1.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Marco Stein</p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
+            <div class="lg:block hidden">
+                <div class=" flex gap-6">
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image1.png" alt="team1"
+                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Marco Stein</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image2.png" alt="team1"
+                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Imogen Mckinney</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image3.png" alt="team1"
+                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Rai Lyons
+                        </p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image4.png" alt="team1"
+                            class="xl:max-w-[267px] lg:max-w-[231px] max-w-[168px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Kaiya Dunlap</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
                 </div>
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image2.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Imogen Mckinney</p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
-                </div>
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image3.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Rai Lyons
-                    </p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
-                </div>
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image4.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Kaiya Dunlap</p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
+                <div class="flex gap-6 xl:pt-[100px] pt-[80px] justify-center">
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image5.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Michio Barr</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image6.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Ryo Navarro</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image7.png" alt="team1" class="xl:max-w-[267px] max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Tianna Bauer
+                        </p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+
                 </div>
             </div>
-            <div class="flex gap-6 pt-[100px] justify-center">
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image5.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Michio Barr</p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
-                </div>
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image6.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Ryo Navarro</p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
-                </div>
-                <div class="bg-black">
-                    <img src="assets/images/png/team-image7.png" alt="team1" class="max-w-[267px]">
-                    <p class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
-                        Tianna Bauer
-                    </p>
-                    <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of the
-                        printing and typesetting industry.</p>
-                </div>
+            <div class="lg:hidden block">
+                <div class="slider-list overflow-hidden">
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image1.png" alt="team1" class="max-w-[231px] ">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Marco Stein</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image2.png" alt="team1" class="max-w-[231px] ">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Imogen Mckinney</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image3.png" alt="team1" class="max-w-[231px] ">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Rai Lyons
+                        </p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image4.png" alt="team1" class=" max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Kaiya Dunlap</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image6.png" alt="team1" class="max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Ryo Navarro</p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text
+                            of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
+                    <div class="bg-black">
+                        <img src="assets/images/png/team-image7.png" alt="team1" class=" max-w-[231px]">
+                        <p
+                            class="font-Lexend-Deca text-white font-semibold text-lg uppercase leading-custom-2lg pt-5 pb-2">
+                            Tianna Bauer
+                        </p>
+                        <p class="text-white max-w-[267px] font-light text-[12px]">Lorem ipsum is simply dummy text
+                            of
+                            the
+                            printing and typesetting industry.</p>
+                    </div>
 
+                </div>
             </div>
         </div>
     </section>
@@ -664,15 +865,21 @@
     <section class="bg-[url(assets/images/png/join-bg.png)] bg-no-repeat bg-cover -mt-1">
         <div class="lg:flex">
             <div class="max-lg:flex justify-center">
-                <img src="assets/images/png/join-image.png" alt="girl" class="xl:max-w-[900px] md:max-w-[660px] max-w-[360px]">
+                <img src="assets/images/png/join-image.png" alt="girl"
+                    class="xl:max-w-[900px] md:max-w-[660px] max-w-[360px]">
             </div>
             <div class="pl-[26px]">
-                <h2 class="font-normal text-custom-lg text-white font-hyper leading-custom-md xl:pt-[313px] lg:pt-[236px] pt-20 max-lg:text-center pb-6">JOIN
+                <h2
+                    class="font-normal text-custom-lg text-white font-hyper leading-custom-md xl:pt-[313px] lg:pt-[236px] pt-20 max-lg:text-center pb-6">
+                    JOIN
                     NAKASHI
                     COMMUNITY</h2>
-                <p class="text-white font-Lexend-Deca font-light max-w-[330px] text-lg leading-tight  max-lg:text-center max-lg:max-w-none">Be part of our
+                <p
+                    class="text-white font-Lexend-Deca font-light max-w-[330px] text-lg leading-tight  max-lg:text-center max-lg:max-w-none">
+                    Be part of our
                     amazing community & stay tuned for the news.</p>
-                <div class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10 mx-auto">
+                <div
+                    class="bg-[url(assets/images/png/gallery-card.png)] bg-no-repeat w-[280px] pl-5 pr-10 flex mt-10 mx-auto">
                     <span>
                         <svg class="my-5" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -708,7 +915,8 @@
                         Copyright &copy;<span id="year"></span> all rights reserved
                     </p>
                 </div>
-                <div class=" flex flex-col items-center  max-lg:hidden transition-all duration-700 scroll-smooth pt-[127px]">
+                <div
+                    class=" flex flex-col items-center  max-lg:hidden transition-all duration-700 scroll-smooth pt-[127px]">
                     <a href="/">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19.5 14.9998L12 7.49976L4.5 14.9998" stroke="white" stroke-linecap="round"
@@ -731,8 +939,14 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
+        integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/js/app.js"></script>
+
 </body>
 
 </html>
