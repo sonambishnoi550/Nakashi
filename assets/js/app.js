@@ -10,64 +10,53 @@ menuBtn.addEventListener("click", () => {
     hamburgerIcon.classList.toggle("hidden", isOpen);
     closeIcon.classList.toggle("hidden", !isOpen);
 });
-// accordion
-document.querySelectorAll('.accordion-item').forEach((accordionItem) => {
-    accordionItem.addEventListener('click', () => {
-        const content = accordionItem.querySelector('.accordion-content');
-        const plusIcon = accordionItem.querySelector('.accordion-icon-plus');
-        const minusIcon = accordionItem.querySelector('.accordion-icon-minus');
 
-        if (accordionItem.classList.contains('active')) {
-            content.style.maxHeight = '0';
-            accordionItem.classList.remove('active', 'active-shadow');
-        } else {
-            document.querySelectorAll('.accordion-item').forEach((item) => {
-                const otherContent = item.querySelector('.accordion-content');
-                const otherPlusIcon = item.querySelector('.accordion-icon-plus');
-                const otherMinusIcon = item.querySelector('.accordion-icon-minus');
-                if (item !== accordionItem) {
-                    otherContent.style.maxHeight = '0';
-                    item.classList.remove('active', 'active-shadow');
-                    otherPlusIcon.classList.remove('hidden');
-                    otherMinusIcon.classList.add('hidden');
-                }
-            });
-            content.style.maxHeight = content.scrollHeight + 'px';
-            accordionItem.classList.add('active', 'active-shadow');
-        }
-        plusIcon.classList.toggle('hidden');
-        minusIcon.classList.toggle('hidden');
+// Accordion
+document.querySelectorAll('.accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const content = item.querySelector('.accordion-content');
+        const icons = item.querySelectorAll('.accordion-icon');
+        const isActive = item.classList.toggle('active');
+
+        document.querySelectorAll('.accordion-item').forEach(i => {
+            if (i !== item) {
+                i.classList.remove('active');
+                i.querySelector('.accordion-content').style.maxHeight = '0';
+                i.querySelectorAll('.accordion-icon-plus').forEach(icon => icon.classList.remove('hidden'));
+                i.querySelectorAll('.accordion-icon-minus').forEach(icon => icon.classList.add('hidden'));
+            }
+        });
+
+        content.style.maxHeight = isActive ? content.scrollHeight + 'px' : '0';
+        icons.forEach(icon => icon.classList.toggle('hidden'));
     });
 });
 
-
-// current year
+// Current Year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// video js
-document.getElementById('toggle-button').addEventListener('click', function () {
-    const image = document.getElementById('dream-image');
-    const video = document.getElementById('dream-video');
+// Video Toggle
+const toggleBtn = document.getElementById('toggle-button');
+const image = document.getElementById('dream-image');
+const video = document.getElementById('dream-video');
 
-    if (video.classList.contains('hidden')) {
-        image.classList.add('hidden');
-        video.classList.remove('hidden');
+toggleBtn.addEventListener('click', () => {
+    const isHidden = video.classList.toggle('hidden');
+    image.classList.toggle('hidden', !isHidden);
+    if (!isHidden) {
         video.play();
     } else {
-        video.classList.add('hidden');
-        image.classList.remove('hidden');
         video.pause();
         video.currentTime = 0;
     }
+    toggleBtn.remove();
 });
-document.getElementById('toggle-button').addEventListener('click', function () {
-    this.remove();
-});
-// slider
+
+// Slider
 $('.slider-list').slick({
     dots: false,
     infinite: true,
-    speed: 5000,
+    speed: 18000,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: 'linear',
@@ -75,23 +64,17 @@ $('.slider-list').slick({
     pauseOnHover: true,
     arrows: false,
 });
-// 
-// Swiper for the second slider (creative effect)
-var swiper2 = new Swiper(".mySwiper2", {
+
+// Swiper Slider
+new Swiper(".mySwiper2", {
     grabCursor: false,
     effect: "creative",
     creativeEffect: {
-        prev: {
-            shadow: false,
-            translate: [0, 0, -400],
-        },
-        next: {
-            translate: ["90%", 0, 0],
-        },
+        prev: { shadow: false, translate: [0, 0, -400] },
+        next: { translate: ["90%", 0, 0] },
     },
     slideToClickedSlide: true,
     speed: 1500,
-    smooth: true,
     loop: true,
-
+    Infinity:true,
 });
