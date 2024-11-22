@@ -76,5 +76,7 @@ new Swiper(".mySwiper2", {
     slideToClickedSlide: true,
     speed: 1500,
     loop: true,
-    Infinity:true,
+    infinite: true,
+    prevArrow: $('.prev-arrow'),
+    nextArrow: $('.next-arrow'),
 });
